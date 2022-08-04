@@ -1,3 +1,8 @@
+#I copied this off a guy on youtube but he didn't complete the tutorial series and i don't get the second part of the code quite honestly i don't understand this part either i get the logic but i don't know how to code this
+#fun
+
+
+
 from lib2to3.pgen2 import token
 from operator import is_
 from bs4 import ResultSet
@@ -9,7 +14,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-app.secret_key = "AIOa324ljkhHJK"
+app.secret_key = "key"
 app.config['SESSION_COOKIE_NAME'] = 'Cookie'
 TOKEN_INFO = "token_info"
 
@@ -88,8 +93,8 @@ def get_token():
 
 def create_spotify_oauth():
     return SpotifyOAuth(
-        client_id = "7ae897e37dd24ed48ab052f0e1a633d8",
-        client_secret = "f2357d9a4a1b4ebaa0c8c921695142a9", 
+        client_id = "client id",
+        client_secret = "client secret", 
         redirect_uri = url_for('authorize', _external=True),
         scope="user-library-read"
     )
