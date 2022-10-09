@@ -52,7 +52,7 @@ def SVI(query): #ScrapeVideoID
     return results['href'].split('/watch?v=')[1]
 
 def __main__():
-    data = pandas.read_csv('/Users/ryan/Documents/programming/SpotifyPlaylistToYoutubeToMP3/songs.csv')
+    data = pandas.read_csv('songs.csv')
     data = data['song_names'].tolist()
     print('Found ', len(data), ' songs')
     DVFT(data[0:30])

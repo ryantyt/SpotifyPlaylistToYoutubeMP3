@@ -1,6 +1,4 @@
 #I copied this off a guy on youtube but he didn't complete the tutorial series and i don't get the second part of the code quite honestly i don't understand this part either i get the logic but i don't know how to code this
-#fun
-
 
 
 from lib2to3.pgen2 import token
@@ -56,11 +54,11 @@ def getTracks():
         offset = n * 50
         n += 1
         items =  sp.current_user_saved_tracks(limit=50, offset=offset)['items']
-        # playlists = sp.current_user_playlists(limit=50, offset=0)
-        # for playlist in enumerate(playlists):
-        #     print(playlist)
-        #     items = sp.playlist_tracks(playlist[0], fields = None, limit=100, offset=0, market=None)
-        #     tracks += [items]
+        playlists = sp.current_user_playlists(limit=50, offset=0)
+        for playlist in enumerate(playlists):
+            print(playlist)
+            items = sp.playlist_tracks(playlist[0], fields = None, limit=100, offset=0, market=None)
+            tracks += [items]
 
         for idx, item in enumerate(items):
             track = item['track']
