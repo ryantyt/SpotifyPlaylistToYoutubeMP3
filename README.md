@@ -6,5 +6,6 @@ debugged off a video I saw on youtube as the guy didn't finish the video
 original repository here: https://github.com/JasonLeviGoodison/SpotifyToYoutubeMP3
 
 If you want to use it:
+change the client name and id in app.py first i forgot where you get it though
 write song name in songs.csv or use setup.py to get all your spotify songs
 then run download_mp3.py to get mp3s
